@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mydealz Highlight Non-Kostenlos
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Highlights spans with shipping costs
 // @author       Your Name
 // @match        https://www.mydealz.de/*
@@ -34,7 +34,13 @@
 
                 if (price !== null && shipping !== null) {
 
-                    const total = price + shipping;
+					//const total = price + shipping;
+
+					// strip VSK from price
+					const price_ohne_VSK = price - shipping;
+					const total = price;
+
+					priceElement.textContent = ` ${price_ohne_VSK.toFixed(2).replace('.', ',')}€`;
 /*
                     shippingElement.style.fontWeight = 'bold';
                     shippingElement.style.color = 'white';
