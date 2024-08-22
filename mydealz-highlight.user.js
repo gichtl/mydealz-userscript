@@ -35,12 +35,12 @@
                 if (price !== null && shipping !== null) {
 
                     const total = price + shipping;
-
+/*
                     shippingElement.style.fontWeight = 'bold';
                     shippingElement.style.color = 'white';
                     shippingElement.style.backgroundColor = 'red';
                     shippingElement.style.fontSize = '1.2rem';
-
+*/
                     const totalElement = document.createElement('span');
                     totalElement.textContent = ` ${total.toFixed(2).replace('.', ',')}€`;
                     totalElement.style.color = 'white';
