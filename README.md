@@ -1,5 +1,5 @@
 ## Credits
-Dieses Skript basiert auf https://github.com/sigrons/mydealz_highlighter/tree/main
+Dieses Skript basiert auf https://github.com/sigrons/mydealz_highlighter
 
 Und wurde [hier](https://www.mydealz.de/diskussion/neue-regelung-zu-dealpreisen-und-versandkosten-versandkosten-sind-kunftig-nicht-mehr-teil-des-dealpreises-2411788#reply-48904603) auf mydealz.de vorgestellt
 
