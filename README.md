@@ -12,6 +12,8 @@ Aus
 wird somit
 ![Screenshot](https://static.mydealz.de/comments/raw/SrKIv/48904603_1/fs/1090x545/qt/80/48904603_1.jpg "Screenshot")
 
+Und nach den kürzlich erfolgten Design-Verunstaltungen von Mydelz mit Version 1.3 mun:
+![Screenshot](https://static.mydealz.de/comments/raw/4mYIt/51597851_1/fs/1090x545/qt/80/51597851_1.jpg)
 
 ## Einrichtung
 Dieses Userskript benötigt die Browser-Erweiterung Tampermonkey (https://www.tampermonkey.net/)
