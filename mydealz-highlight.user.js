@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mydealz Highlight Non-Kostenlos
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @description  Highlights spans with shipping costs
 // @author       Your Name
 // @match        https://www.mydealz.de/*
@@ -32,7 +32,12 @@
                 const shipping = parsePrice(shippingText);
 
                 if (price !== null && shipping !== null) {
+                    // remove "incl." Text
                     shippingElement.innerHTML = shippingElement.innerHTML.replace(/inkl\./g, '');
+                    // change to old truck-icon
+                    shippingElement.innerHTML = shippingElement.innerHTML.replace(/ico_707ed/g, 'ico_5b5d6');
+                    shippingElement.innerHTML = shippingElement.innerHTML.replace(/width=\"18px\"/g, 'width="24px"');
+                    shippingElement.innerHTML = shippingElement.innerHTML.replace(/height=\"14px\"/g, 'height="18px"');
 
                     //const total = price + shipping;
 
