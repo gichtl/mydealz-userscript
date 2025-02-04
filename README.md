@@ -7,13 +7,13 @@ Und wurde [hier](https://www.mydealz.de/diskussion/neue-regelung-zu-dealpreisen-
 ## Features
 Mit diesem Skript werden in der Deal-Übersicht auf mydealz die inkludierten VSK aus dem Deal-Preis herausgenommen und getrennt angezeigt. Der Gesamtpreis erscheint dann ganz rechts hervorgehoben
 
-Aus
-![Screenshot](https://static.mydealz.de/comments/raw/c4NjU/48904603_1/fs/1090x545/qt/80/48904603_1.jpg "Screenshot")
-wird somit
-![Screenshot](https://static.mydealz.de/comments/raw/SrKIv/48904603_1/fs/1090x545/qt/80/48904603_1.jpg "Screenshot")
+Aus <br />
+![Screenshot](https://static.mydealz.de/comments/raw/c4NjU/48904603_1/fs/1090x545/qt/80/48904603_1.jpg "Screenshot") <br />
+wird somit <br />
+![Screenshot](https://static.mydealz.de/comments/raw/SrKIv/48904603_1/fs/1090x545/qt/80/48904603_1.jpg "Screenshot") <br />
 
-Und nach den kürzlich erfolgten Design-Verunstaltungen von Mydelz mit Version 1.3 mun:
-![Screenshot](https://static.mydealz.de/comments/raw/4mYIt/51597851_1/fs/1090x545/qt/80/51597851_1.jpg)
+Und nach den kürzlich erfolgten Design-Verunstaltungen von Mydelz mit Version 1.3 wird nun: <br />
+![Screenshot](https://static.mydealz.de/comments/raw/4mYIt/51597851_1/fs/1090x545/qt/80/51597851_1.jpg) <br />
 
 ## Einrichtung
 Dieses Userskript benötigt die Browser-Erweiterung Tampermonkey (https://www.tampermonkey.net/)
