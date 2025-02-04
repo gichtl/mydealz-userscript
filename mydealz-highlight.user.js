@@ -12,18 +12,17 @@
     'use strict';
 
     function parsePrice(text) {
-        const cleanedText = text.replace(/[^\d,]/g, '').replace(',', '.');
+        const cleanedText = text.replace(/[^\d,]/g, '').replace('.', '').replace(',', '.');
         return parseFloat(cleanedText) || null;
     }
 
     function checkAndStyleSpans() {
-        //const spans = document.querySelectorAll('span.overflow--wrap-off.size--all-s');
-        const spans = document.querySelectorAll('span.overflow--fade');
+        const spans = document.querySelectorAll('.threadListCard-body');
 
         // Loop through each span
         spans.forEach(span => {
-            const priceElement = span.querySelector('span.threadItemCard-price');
-            const shippingElement = span.querySelector('span.overflow--wrap-off.size--all-s');
+            const priceElement = span.querySelector('span.thread-price');
+            const shippingElement = span.querySelector('span.color--text-TranslucentSecondary');
 
             if (priceElement && shippingElement && !span.dataset.processed) {
                 const priceText = priceElement.textContent.trim();
@@ -33,6 +32,7 @@
                 const shipping = parsePrice(shippingText);
 
                 if (price !== null && shipping !== null) {
+                    shippingElement.innerHTML = shippingElement.innerHTML.replace(/inkl\./g, '');
 
 					//const total = price + shipping;
 
