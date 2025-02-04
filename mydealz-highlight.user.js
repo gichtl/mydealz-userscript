@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mydealz Highlight Non-Kostenlos
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  Highlights spans with shipping costs
 // @author       Your Name
 // @match        https://www.mydealz.de/*
@@ -34,19 +34,19 @@
                 if (price !== null && shipping !== null) {
                     shippingElement.innerHTML = shippingElement.innerHTML.replace(/inkl\./g, '');
 
-					//const total = price + shipping;
+                    //const total = price + shipping;
 
-					// strip VSK from price
-					const price_ohne_VSK = price - shipping;
-					const total = price;
+                    // strip VSK from price
+                    const price_ohne_VSK = price - shipping;
+                    const total = price;
 
-					priceElement.textContent = ` ${price_ohne_VSK.toFixed(2).replace('.', ',')}€`;
-/*
-                    shippingElement.style.fontWeight = 'bold';
-                    shippingElement.style.color = 'white';
-                    shippingElement.style.backgroundColor = 'red';
-                    shippingElement.style.fontSize = '1.2rem';
-*/
+                    priceElement.textContent = ` ${price_ohne_VSK.toFixed(2).replace('.', ',')}€`;
+                    const shippingPrice = shippingElement.querySelector('span.overflow--wrap-off');
+                    shippingPrice.style.fontWeight = 'bold';
+                    shippingPrice.style.color = 'red';
+                    shippingPrice.style.backgroundColor = 'white';
+                    shippingPrice.style.fontSize = '1.2rem';
+
                     const totalElement = document.createElement('span');
                     totalElement.textContent = ` ${total.toFixed(2).replace('.', ',')}€`;
                     totalElement.style.color = 'white';
