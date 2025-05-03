@@ -72,7 +72,19 @@
     // Run the function when the page loads
     window.addEventListener('load', checkAndStyleSpans);
 
+    // Function to debounce actions for better performance
+    function debounce(func, wait) {
+        let timeout;
+        return function(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+    }
+
     // Also run the function when new content is loaded (e.g., via AJAX)
-    const observer = new MutationObserver(checkAndStyleSpans);
+    const observer = new MutationObserver(debounce(() => {
+        setTimeout(checkAndStyleSpans, 500);
+    }, 300));
+
     observer.observe(document.body, { childList: true, subtree: true });
 })();
